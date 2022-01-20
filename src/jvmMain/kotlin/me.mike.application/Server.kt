@@ -29,7 +29,7 @@ fun HTML.index() {
 fun main() {
     embeddedServer(Netty, port = 8080, host = "127.0.0.1") {
         routing {
-            get("/") {
+            get("/") git {
                 call.respondHtml(HttpStatusCode.OK, HTML::index)
             }
             static("/static") {
